@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp" android:padding="0dp"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <!--header layout starts-->
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="4dp"
+        android:weightSum="3"
+        android:background="#FFFFFF"
+        android:id="@+id/hdr_content">
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:background="@drawable/edittextbackground"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@drawable/ic_back_arrow"
+            android:text="Cancel" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.4"
+            android:layout_gravity="center"
+            android:text="item005"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:id="@+id/txt_item_price"/>
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:background="@drawable/edittextbackground"
+            android:layout_centerHorizontal="true"
+            android:drawableRight="@drawable/ic_next"
+            android:text="Save" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="2dp"
+        android:background="#000000"/>
+   <!-- header layout ends-->
+
+
+    <!--Quantity layout starts-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:weightSum="3"
+        android:id="@+id/qty_content">
+        <EditText
+            android:id="@+id/et_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:inputType="number"
+            android:layout_centerHorizontal="true"
+            android:text="1" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight=".7"
+            android:background="@drawable/edittextbackground"
+            android:src="@drawable/ic_minus"
+            android:id="@+id/btn_reduce"/>
+
+        <ImageButton
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:background="@drawable/edittextbackground"
+            android:layout_weight=".7"
+            android:src="@drawable/ic_plus"
+            android:layout_centerHorizontal="true"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="#000000"/>
+    <!-- header layout ends-->
+
+    <!--dicount layout begins-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="8dp"
+                android:text="Discount A(0%)"/>
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switch_id1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_weight="1"
+                android:layout_centerVertical="true"
+                android:paddingRight="10dp"
+                />
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Discount B(10%)"/>
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switch_id2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_weight="1"
+                android:layout_centerVertical="true"
+                android:paddingRight="10dp"
+                />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <!--<3rd and 4th discount layout start.  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="8dp"
+                android:text="Discount C(35.5%)"/>
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switch_id3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_weight="1"
+                android:layout_centerVertical="true"
+                android:paddingRight="10dp"
+                />
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Discount D(50%)"/>
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switch_id4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_weight="1"
+                android:layout_centerVertical="true"
+                android:paddingRight="10dp"
+                />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <!--<3rd and 4th discount layout. ends  -->
+
+    <!--5th switch start-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:text="Discount D(50%)"/>
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/switch_id5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:paddingRight="10dp"
+            />
+
+
+    </LinearLayout>
+    <!--5th switch ends-->
+
+
+
+
+
+
+    <!--dicount layout ends-->
+
+
+
+<!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+
+
+
+        <TextView
+            android:id="@+id/messageText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:lineSpacingExtra="4dp"
+            android:gravity="left" android:layout_gravity="left"
+            android:text="Please fill all the field and try."
+            android:textSize="15dp"
+            />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_margin="0dp" android:paddingBottom="4dp" android:paddingRight="12dp">
+
+        <Button
+            android:id="@+id/okbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:background="#ffffff"
+            android:stateListAnimator="@null"
+            android:text="OK"
+            android:textColor="@color/colorAccent"
+            android:textSize="13dp" android:textAllCaps="true"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"/>
+
+
+
+
+
+    </RelativeLayout>-->
+
+</LinearLayout>

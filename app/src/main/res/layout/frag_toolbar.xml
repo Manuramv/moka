@@ -1,0 +1,29 @@
+<android.support.v7.widget.Toolbar android:id="@+id/tool_bar"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="#e7dbdb"
+    android:elevation="8dp"
+    app:layout_collapseMode="pin"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/homeicon"
+        android:src="@drawable/ic_back_arrow"/>
+
+    <TextView
+        android:id="@+id/toolbar_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:text="Library"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        android:visibility="visible"
+         />
+</android.support.v7.widget.Toolbar>

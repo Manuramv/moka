@@ -1,0 +1,155 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mokapos.com.shopping.fragments.ShoppingCartFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <include layout="@layout/frag_toolbar"
+            android:id="@+id/toobar_item"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/txt_noitem"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="No Items" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_shopcartitems"
+            android:layout_below="@+id/toobar_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+            android:background="#FFFFFF"/>
+
+        <!--subtotal layout begins-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:id="@+id/subtotalcontainer">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Subtotal"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:layout_marginRight="8dp"
+                android:id="@+id/txt_subtotalamt"
+                android:layout_weight="1"
+                android:text="$2800"/>
+
+
+        </LinearLayout>
+        <!--subtotal layout ends-->
+        <!--discount layout begins-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:id="@+id/discountcontainer">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Discount"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:layout_marginRight="8dp"
+                android:id="@+id/txt_discountamount"
+                android:layout_weight="1"
+                android:text="$1018"/>
+
+
+        </LinearLayout>
+        <!--begins button layout.-->
+                <Button
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="CLEAR SALE"
+            android:id="@+id/btn_clear"
+            android:layout_above="@+id/txt_charge"
+            android:background="@drawable/clearsalebg"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="2dp"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Charge $ 0"
+            android:id="@+id/btn_charge"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/edittextbackground"
+            android:layout_alignParentBottom="true"/>
+        <!--    button section ends-->
+        <!--discount layout ends-->
+    </LinearLayout>
+   <!-- end  of recyclerview item list-->
+
+        </ScrollView>
+
+
+
+        <!--begins button layout.-->
+       <!-- <Button
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Clear"
+            android:id="@+id/txt_clear"
+            android:layout_above="@+id/txt_charge"
+            android:background="@drawable/clearsalebg"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="2dp"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Charge"
+            android:id="@+id/txt_charge"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/edittextbackground"
+            android:layout_alignParentBottom="true"/>-->
+        <!--    button section ends-->
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>
