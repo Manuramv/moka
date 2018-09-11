@@ -88,7 +88,7 @@ public class AllitemsAdapter extends RecyclerView.Adapter<AllitemsAdapter.ViewHo
 
     @Override
     public int getItemCount() {
-        return 8;
+        return dataList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
